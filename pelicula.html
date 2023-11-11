@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Película</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="pelis.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">PELISMELIO</h2>
+            <nav>
+                <a href="menu.html" class="activo">Inicio</a>
+                <select id="filtro-select">
+                    <option value="nombre">Nombre</option>
+                    <option value="año">Año</option>
+                    <option value="director">Director</option>
+                </select>
+                <input type="text" id="filtro-input" placeholder="">
+            </nav>
+        </div>
+    </header>
+
+    <div style="width: 400px; margin: 0 auto; text-align: center; padding: 20px;  border-radius: 5px; color: white;">
+        <h1 id="nombre-pelicula" style="font-size: 24px; margin-bottom: 10px;"></h1>
+        <p id="descripcion-pelicula" style="margin-bottom: 8px;"></p>
+        <p>Año : <span id="ano-pelicula" style="font-weight: bold;"></span></p>
+        <p>Director: <span id="director-pelicula" style="font-weight: bold;"></span></p>
+        <p>URL de enlace externo a YouTube: <a id="youtube-url" href="" target="_blank" style="color: blue;"></a></p>
+        <img id="trailer-preview" src="" alt="Vista previa del tráiler" style="max-width: 100%; margin-top: 10px;">
+        <!-- <iframe id="trailer-preview" width="400" height="225" frameborder="0" allowfullscreen width="560" height="315"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe> lo mismo, así sería para el iframe, pero no da un error de cliente por la disponibilidad del vídeo.-->
+        <p>Valoración IMDB: <span id="valoracion-imdb" style="font-weight: bold;"></span></p>
+    </div>
+
+
+
+</body>
+
+</html>

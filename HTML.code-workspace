@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"name": "HTML",
+			"path": "../HTML"
+		},
+		{
+			"name": "Patrones",
+			"path": "../../Desktop/Descom/Patrones"
+		},
+		{
+			"name": "WEB",
+			"path": "../../Desktop/WEB"
+		},
+		{
+			"name": "Trabajo final lenguajes",
+			"path": "../../Desktop/Descom/Trabajo final lenguajes"
+		},
+		{
+			"name": "VISUAL STUDIO CODE",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

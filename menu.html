@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+		rel="stylesheet">
+	<link rel="icon" type="image/png" href="img/logopes.jpg">
+
+	<title>PELISMELIO</title>
+</head>
+
+<body>
+	<header>
+		<div class="contenedor">
+			<h2 class="logotipo">PELISMELIO</h2>
+			<nav>
+				<a href="menu.html" class="activo">Inicio</a>
+				<select id="filtro-select">
+					<option value="nombre">Nombre</option>
+					<option value="año">Año</option>
+					<option value="director">Director</option>
+				</select>
+				<input type="text" id="filtro-input" placeholder="">
+				<button
+					style="background-color: transparent; font-weight: bold; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;"
+					type="button" onclick="goToLogin()">Cerrar sesión</button>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="pelicula-principal">
+			<div class="contenedor">
+				<h3 class="titulo">Avengers: Infinity War</h3>
+				<p class="descripcion">
+					Los héroes de Marvel se unen para detener a Thanos, un poderoso villano en busca de las Gemas del
+					Infinito para acabar con la mitad de la vida en el universo y desatar el caos.
+				</p>
+				<button role="button" class="boton"><i class="fas fa-play"></i><a
+						href="https://www.youtube.com/watch?v=6ZfuNTqbHE8&ab_channel=MarvelEntertainment">Reproducir</a></button>
+			</div>
+		</div>
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Películas Destacadas</h3>
+				<div class="indicadores"></div>
+			</div>
+
+			<div class="contenedor-principal">
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i
+						class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-carousel">
+					<div class="carousel">
+						<div class="pelicula" onmouseover="showMovieTitle(this)" onmouseout="hideMovieTitle(this)">
+							<a href="https://www.youtube.com/watch?v=kg4Na-RbSrA&ab_channel=Slyfer2812"><img
+									src="img/ironmanhor.jpg" alt=""></a>
+						</div>
+						<div class="pelicula" onmouseover="showMovieTitle(this)" onmouseout="hideMovieTitle(this)">
+							<a href="https://www.youtube.com/watch?v=3wEnSKsuYlU&ab_channel=RhinoTV"><img
+									src="img/amazingspidermanhor.jpg" alt=""></a>
+						</div>
+						<div class="pelicula" onmouseover="showMovieTitle(this)" onmouseout="hideMovieTitle(this)">
+							<a href="https://www.youtube.com/watch?v=tTdBf6shRR0&ab_channel=LM"><img
+									src="img/gentlemanhor.jpeg" alt=""></a>
+						</div>
+						<div class="pelicula" onmouseover="showMovieTitle(this)" onmouseout="hideMovieTitle(this)">
+							<a href="https://www.youtube.com/watch?v=tZHIat7ToWE&ab_channel=BraveOrder"><img
+									src="img/readyplayerhor.png" alt=""></a>
+						</div>
+						<div class="pelicula" onmouseover="showMovieTitle(this)" onmouseout="hideMovieTitle(this)">
+							<a href="https://www.youtube.com/watch?v=cbAfhBNQ2qU&ab_channel=TopMovieClips"><img
+									src="img/guardianes3hor.jpg" alt=""></a>
+						</div>
+						<div class="pelicula" onmouseover="showMovieTitle(this)" onmouseout="hideMovieTitle(this)">
+							<a href="https://www.youtube.com/watch?v=BM5Bqhn9I94&ab_channel=DavidVarela"><img
+									src="img/mileshor.jpg" alt=""></a>
+						</div>
+						<div class="pelicula" onmouseover="showMovieTitle(this)" onmouseout="hideMovieTitle(this)">
+							<a href="https://www.youtube.com/watch?v=FCPZrf1xtyU&ab_channel=xRav3n"><img
+									src="img/pacificrimhor.jpeg" alt=""></a>
+						</div>
+						<div class="pelicula" onmouseover="showMovieTitle(this)" onmouseout="hideMovieTitle(this)">
+							<a href="https://www.youtube.com/watch?v=bLe6JS8r_eA&ab_channel=psychokai"><img
+									src="img/civilwarhor.png" alt=""></a>
+						</div>
+						<div class="pelicula" onmouseover="showMovieTitle(this)" onmouseout="hideMovieTitle(this)">
+							<a href="https://www.youtube.com/watch?v=z9ZsrliOLqs&ab_channel=EvelynJackson"><img
+									src="img/mazerunnerhor.jpg" alt=""></a>
+						</div>
+						<div class="pelicula" onmouseover="showMovieTitle(this)" onmouseout="hideMovieTitle(this)">
+							<a href="https://www.youtube.com/watch?v=BHJBKd6P3eQ&ab_channel=Laetri"><img
+									src="img/enderhor.jpg" alt=""></a>
+						</div>
+
+
+					</div>
+				</div>
+
+				<button role="button" id="flecha-derecha" class="flecha-derecha"><i
+						class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+
+		<div id="peliculas-container" class="pelicula-container"></div>
+
+	</main>
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="movies.js"></script>
+	<script src="pelis.js"></script>
+
+</body>
+
+</html>
