@@ -1,0 +1,36 @@
+version: 2.1
+
+executors:
+  node-executor:
+    docker:
+      - image: circleci/node:14
+
+jobs:
+  build:
+    executor: node-executor
+    steps:
+      - checkout
+      - run:
+          name: Install HTMLHint
+          command: npm install -g htmlhint
+      - run:
+          name: Install CSSLint
+          command: npm install -g csslint
+      - run:
+          name: Install ESLint
+          command: npm install -g eslint
+      - run:
+          name: Lint HTML files
+          command: htmlhint ./**/*.html
+      - run:
+          name: Lint CSS files
+          command: csslint ./**/*.css
+      - run:
+          name: Lint JavaScript files
+          command: eslint ./**/*.js
+
+workflows:
+  version: 2
+  build_and_lint:
+    jobs:
+      - build
